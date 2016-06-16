@@ -748,7 +748,7 @@ Regex
 </code></pre>
 
 <div class='text-muted'><p>None
-<br />&lt;_sre.SRE_Match object at 0x10a695a58&gt;
+<br />&lt;_sre.SRE_Match object; span=(0, 1), match=&#x27;a&#x27;&gt;
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -887,9 +887,9 @@ Float
 </code></pre>
 
 <div class='text-muted'><p>4
+<br />4.5
 <br />4
-<br />4.0
-<br />4.0
+<br />4
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -925,8 +925,8 @@ Get type of object
 <span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 </code></pre>
 
-<div class='text-muted'><p>&lt;type &#x27;str&#x27;&gt;
-<br />&lt;type &#x27;int&#x27;&gt;
+<div class='text-muted'><p>&lt;class &#x27;str&#x27;&gt;
+<br />&lt;class &#x27;int&#x27;&gt;
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -1111,9 +1111,9 @@ Null/True/False?
 <br />0 - false
 <br />True - true
 <br />False - false
-<br />None - false
-<br />()
-<br />&quot;if value is None&quot;:
+<br />None - false</p>
+
+<p>&quot;if value is None&quot;:
 <br />&#x27;string&#x27; - false
 <br />&#x27;&#x27; - false
 <br />[1, 2, 3] - false
@@ -1122,9 +1122,9 @@ Null/True/False?
 <br />0 - false
 <br />True - false
 <br />False - false
-<br />None - true
-<br />()
-<br />&quot;if len(value)&quot;:
+<br />None - true</p>
+
+<p>&quot;if len(value)&quot;:
 <br />&#x27;string&#x27; - true
 <br />&#x27;&#x27; - false
 <br />[1, 2, 3] - true
@@ -1490,10 +1490,7 @@ Map (change all)
 <span class="k">print</span><span class="p">(</span><span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">num</span><span class="p">:</span> <span class="n">num</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">arr</span><span class="p">))</span>
 </code></pre>
 
-<div class='text-muted'><p>  File &quot;&#x2F;Users&#x2F;evmorov&#x2F;projects&#x2F;lang-compare&#x2F;code&#x2F;array_map.py&quot;, line 2
-<br />    print(*map(lambda num: num * 2, arr))
-<br />          ^
-<br />SyntaxError: invalid syntax
+<div class='text-muted'><p>2 10 20 40
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -1798,7 +1795,7 @@ Unique
 <pre class="highlight python"><code><span class="k">print</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">]))</span>
 </code></pre>
 
-<div class='text-muted'><p>set([&#x27;a&#x27;, &#x27;b&#x27;])
+<div class='text-muted'><p>{&#x27;a&#x27;, &#x27;b&#x27;}
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -1869,7 +1866,7 @@ Add
 <span class="k">print</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
 </code></pre>
 
-<div class='text-muted'><p>{&#x27;font_size&#x27;: 10, &#x27;font_family&#x27;: &#x27;Arial&#x27;}
+<div class='text-muted'><p>{&#x27;font_family&#x27;: &#x27;Arial&#x27;, &#x27;font_size&#x27;: 10}
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -1903,8 +1900,8 @@ Iterate
   <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 </code></pre>
 
-<div class='text-muted'><p>(&#x27;font_size&#x27;, 10)
-<br />(&#x27;font_family&#x27;, &#x27;Arial&#x27;)
+<div class='text-muted'><p>font_size 10
+<br />font_family Arial
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -2812,7 +2809,7 @@ With a message
   <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </code></pre>
 
-<div class='text-muted'><p>integer division or modulo by zero
+<div class='text-muted'><p>division by zero
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -2849,7 +2846,7 @@ Method
 <span class="n">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </code></pre>
 
-<div class='text-muted'><p>integer division or modulo by zero
+<div class='text-muted'><p>division by zero
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -2909,11 +2906,10 @@ Read
     <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 </code></pre>
 
-<div class='text-muted'><p>Traceback (most recent call last):
-<br />  File &quot;&#x2F;Users&#x2F;evmorov&#x2F;projects&#x2F;lang-compare&#x2F;code&#x2F;file_read.py&quot;, line 1, in &lt;module&gt;
-<br />    import pathlib
-<br />ImportError: No module named pathlib
-</p></div>
+<div class='text-muted'><p>Hello
+<br />World</p>
+
+<p></p></div>
 </div>
 <div class='col-md-6'>
 <pre class="highlight java"><code><span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
@@ -2959,11 +2955,7 @@ Write
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'Some glorious content'</span><span class="p">)</span>
 </code></pre>
 
-<div class='text-muted'><p>Traceback (most recent call last):
-<br />  File &quot;&#x2F;Users&#x2F;evmorov&#x2F;projects&#x2F;lang-compare&#x2F;code&#x2F;file_write.py&quot;, line 1, in &lt;module&gt;
-<br />    import pathlib
-<br />ImportError: No module named pathlib
-</p></div>
+<div class='text-muted'><p></p></div>
 </div>
 <div class='col-md-6'>
 <pre class="highlight java"><code><span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
@@ -3058,10 +3050,7 @@ Dir path
 <span class="k">print</span><span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span>
 </code></pre>
 
-<div class='text-muted'><p>Traceback (most recent call last):
-<br />  File &quot;&#x2F;Users&#x2F;evmorov&#x2F;projects&#x2F;lang-compare&#x2F;code&#x2F;file_dir_path.py&quot;, line 1, in &lt;module&gt;
-<br />    import pathlib
-<br />ImportError: No module named pathlib
+<div class='text-muted'><p>&#x2F;Users&#x2F;evmorov&#x2F;projects&#x2F;lang-compare&#x2F;code
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -3094,10 +3083,7 @@ Parent dir path
 <span class="k">print</span><span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parents</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </code></pre>
 
-<div class='text-muted'><p>Traceback (most recent call last):
-<br />  File &quot;&#x2F;Users&#x2F;evmorov&#x2F;projects&#x2F;lang-compare&#x2F;code&#x2F;file_parent_dir_path.py&quot;, line 1, in &lt;module&gt;
-<br />    import pathlib
-<br />ImportError: No module named pathlib
+<div class='text-muted'><p>&#x2F;Users&#x2F;evmorov&#x2F;projects&#x2F;lang-compare
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -3132,10 +3118,7 @@ Sister dir path
 <span class="k">print</span><span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parents</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="s">'data'</span><span class="p">)</span>
 </code></pre>
 
-<div class='text-muted'><p>Traceback (most recent call last):
-<br />  File &quot;&#x2F;Users&#x2F;evmorov&#x2F;projects&#x2F;lang-compare&#x2F;code&#x2F;file_sister_dir_path.py&quot;, line 1, in &lt;module&gt;
-<br />    import pathlib
-<br />ImportError: No module named pathlib
+<div class='text-muted'><p>&#x2F;Users&#x2F;evmorov&#x2F;projects&#x2F;lang-compare&#x2F;data
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -3319,10 +3302,8 @@ Closure
 <span class="n">greeting</span><span class="p">()</span>
 </code></pre>
 
-<div class='text-muted'><p>  File &quot;&#x2F;Users&#x2F;evmorov&#x2F;projects&#x2F;lang-compare&#x2F;code&#x2F;method_closure.py&quot;, line 4
-<br />    greeting = lambda: print(&#x27;Hello World!&#x27;)
-<br />                           ^
-<br />SyntaxError: invalid syntax
+<div class='text-muted'><p>[4, 9]
+<br />Hello World!
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -3354,10 +3335,8 @@ Block passing
 </span><span class="nn">print</span><span class="err">(</span><span class="nn">list</span><span class="err">(</span><span class="nn">my_select</span><span class="err">([1,</span> <span class="err">5,</span> <span class="err">10],</span> <span class="nn">lambda</span> <span class="nn">x</span><span class="err">:</span> <span class="nn">x</span> <span class="err">&lt;</span> <span class="err">6)))
 </span></code></pre>
 
-<div class='text-muted'><p>  File &quot;&#x2F;Users&#x2F;evmorov&#x2F;projects&#x2F;lang-compare&#x2F;code&#x2F;method_block_passing.py&quot;, line 2
-<br />    yield from arr
-<br />             ^
-<br />SyntaxError: invalid syntax
+<div class='text-muted'><p>[1, 5]
+<br />[1, 5]
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -4115,7 +4094,7 @@ Destructuring assignment
 <span class="k">print</span><span class="p">(</span><span class="n">one</span><span class="p">,</span> <span class="n">two</span><span class="p">)</span>
 </code></pre>
 
-<div class='text-muted'><p>(1, 2)
+<div class='text-muted'><p>1 2
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -4170,7 +4149,7 @@ Time
 <span class="k">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
 </code></pre>
 
-<div class='text-muted'><p>2016-06-16 09:45:57.636969
+<div class='text-muted'><p>2016-06-16 09:57:44.176487
 </p></div>
 </div>
 <div class='col-md-6'>
@@ -4258,16 +4237,7 @@ Run command
 <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s">'python3'</span><span class="p">,</span> <span class="s">'--version'</span><span class="p">])</span>
 </code></pre>
 
-<div class='text-muted'><p>Traceback (most recent call last):
-<br />  File &quot;&#x2F;Users&#x2F;evmorov&#x2F;projects&#x2F;lang-compare&#x2F;code&#x2F;other_run_command.py&quot;, line 2, in &lt;module&gt;
-<br />    subprocess.call([&#x27;python3&#x27;, &#x27;--version&#x27;])
-<br />  File &quot;&#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;Python.framework&#x2F;Versions&#x2F;2.7&#x2F;lib&#x2F;python2.7&#x2F;subprocess.py&quot;, line 522, in call
-<br />    return Popen(*popenargs, **kwargs).wait()
-<br />  File &quot;&#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;Python.framework&#x2F;Versions&#x2F;2.7&#x2F;lib&#x2F;python2.7&#x2F;subprocess.py&quot;, line 710, in __init__
-<br />    errread, errwrite)
-<br />  File &quot;&#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;Python.framework&#x2F;Versions&#x2F;2.7&#x2F;lib&#x2F;python2.7&#x2F;subprocess.py&quot;, line 1335, in _execute_child
-<br />    raise child_exception
-<br />OSError: [Errno 2] No such file or directory
+<div class='text-muted'><p>Python 3.5.1
 </p></div>
 </div>
 <div class='col-md-6'>
